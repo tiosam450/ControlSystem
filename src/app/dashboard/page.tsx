@@ -26,7 +26,7 @@ export default async function Dashboard() {
       customer: true,
     },
     orderBy: {
-      created_at: "asc"
+      data: "asc"
     }
   })
 
@@ -57,11 +57,11 @@ export default async function Dashboard() {
             </tr>
           </thead>
           <tbody>
-            {tickets.map(ticket => (
+            {tickets.map(tickets => (
               <TicketItem
-                key={ticket.id}
-                customer={ticket.customer}
-                ticket={ticket}
+                key={tickets.id}
+                Customer={tickets.customer}
+                tickets={tickets}
               />
             ))}
 
