@@ -32,8 +32,8 @@ model Customer {
 
 model Ticket{
   id String @id @default(auto()) @map("_id") @db.ObjectId
-  nome String
-  descricao String
+  name String
+  description String
   status String
   data DateTime? @default(now())
   upDate DateTime? @default(now())

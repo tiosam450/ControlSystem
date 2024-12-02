@@ -9,11 +9,13 @@ import prismaClient from '@/lib/prisma'
 import { ButtonRefresh } from './components/button'
 
 export default async function Dashboard() {
+  //  Rota privada
   const session = await getServerSession(authOptions)
 
   if (!session || !session.user) {
     redirect("/")
   }
+
 
   const tickets = await prismaClient.ticket.findMany({
     where: {
@@ -57,13 +59,13 @@ export default async function Dashboard() {
             </tr>
           </thead>
           <tbody>
-            {tickets.map(tickets => (
+            {/* {tickets.map(tickets => (
               <TicketItem
                 key={tickets.id}
-                Customer={tickets.customer}
+                customer={tickets.customer}
                 tickets={tickets}
               />
-            ))}
+            ))} */}
 
           </tbody>
         </table>
