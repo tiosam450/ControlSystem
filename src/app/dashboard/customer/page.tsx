@@ -35,7 +35,7 @@ export default async function Customer() {
           {customers.map(customer => (
             <CardCustomer
               key={customer.id}
-              customer={customer}
+              customer = {customer} 
             />
           ))}
         </section>

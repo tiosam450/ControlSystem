@@ -59,13 +59,13 @@ export default async function Dashboard() {
             </tr>
           </thead>
           <tbody>
-            {/* {tickets.map(tickets => (
+            {tickets.map(tickets => (
               <TicketItem
                 key={tickets.id}
                 customer={tickets.customer}
-                tickets={tickets}
+                ticket = {tickets}
               />
-            ))} */}
+            ))}
 
           </tbody>
         </table>
